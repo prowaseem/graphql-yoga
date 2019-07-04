@@ -6,16 +6,20 @@
   "scripts": {
     "start": "serverless offline",
     "deploy": "serverless deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "Kim Brandwijk <kim.brandwijk@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "graphql-yoga": "*"
+    "graphql-yoga": "*",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "serverless": "1.25.0",
     "serverless-offline": "3.16.0"
-  }
+  },
+  "snyk": true
 }
