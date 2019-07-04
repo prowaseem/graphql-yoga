@@ -7,7 +7,9 @@
     "test": "npm run test",
     "dev": "nodemon --exec babel-node src/index.js",
     "build": "NODE_ENV=PRODUCTION babel src -d dist --copy-files",
-    "serve": "NODE_ENV=production node dist/index.js"
+    "serve": "NODE_ENV=production node dist/index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "gql",
@@ -18,7 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "graphql-yoga": "^1.14.4",
-    "mongoose": "^5.1.2"
+    "mongoose": "^5.1.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -26,5 +29,6 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "nodemon": "^1.17.5"
-  }
+  },
+  "snyk": true
 }
