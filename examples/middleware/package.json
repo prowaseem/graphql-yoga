@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
-    "graphql-yoga": "1.2.0"
+    "graphql-yoga": "1.2.0",
+    "snyk": "^1.189.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
