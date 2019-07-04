@@ -6,12 +6,16 @@
   "keywords": [],
   "license": "MIT",
   "scripts": {
-    "build": "netlify-lambda build server"
+    "build": "netlify-lambda build server",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
-    "graphql-yoga": "^1.14.7"
+    "graphql-yoga": "^1.14.7",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "netlify-lambda": "^0.4.0"
-  }
+  },
+  "snyk": true
 }
