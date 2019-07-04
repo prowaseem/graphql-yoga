@@ -1,18 +1,22 @@
 {
   "scripts": {
-    "start": "ts-node ."
+    "start": "ts-node .",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "graphql-yoga": "1.2.0",
     "imgur-uploader": "4.2.1",
     "lowdb": "1.0.0",
     "mkdirp": "0.5.1",
-    "shortid": "2.2.8"
+    "shortid": "2.2.8",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@types/mkdirp": "0.5.2",
     "@types/node": "9.4.0",
     "ts-node": "4.1.0",
     "typescript": "2.6.2"
-  }
+  },
+  "snyk": true
 }
