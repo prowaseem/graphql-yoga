@@ -6,7 +6,7 @@
     },
     "dependencies": {
         "graphql": "0.13.1",
-        "graphql-yoga": "1.6.1",
+        "graphql-yoga": "1.18.1",
         "merge-graphql-schemas": "1.5.0"
     },
     "devDependencies": {
