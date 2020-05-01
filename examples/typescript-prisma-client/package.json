@@ -12,12 +12,16 @@
   "dependencies": {
     "graphql": "^0.13.2",
     "graphql-yoga": "^1.16.1",
-    "prisma-client-lib": "^1.17.1"
+    "prisma-client-lib": "^1.17.1",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "prisma": "cd prisma && prisma",
     "start": "ts-node src/index.ts",
     "scaffold-resolvers": "graphql-resolver-codegen scaffold -s src/schema.graphql",
-    "generate-resolvers": "graphql-resolver-codegen interfaces -s src/schema.graphql -o src/generated/resolvers.ts"
-  }
+    "generate-resolvers": "graphql-resolver-codegen interfaces -s src/schema.graphql -o src/generated/resolvers.ts",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
